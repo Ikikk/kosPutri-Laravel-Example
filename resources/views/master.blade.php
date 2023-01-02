@@ -24,8 +24,8 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>Kos Putri</h1><br>
+        <h1>Kos Putri Pak Dar</h1><br>
         @yield('content')
-        <br><br><br><h1>di gebang</h1>
+        <br><br><br><h3> Jalan Keputih Perintis 1A No.42A</h3>
     </body>
 </html>

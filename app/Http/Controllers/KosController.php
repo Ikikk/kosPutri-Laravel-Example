@@ -16,8 +16,13 @@ class KosController extends Controller
      */
     public function index()
     {
+        return view('index');
+    }
+
+    public function indexKamar()
+    {
         $rooms = Room::all();
-        return view('index', ['rooms' => $rooms]);
+        return view('indexKamar', ['rooms' => $rooms]);
     }
 
     /**
@@ -28,7 +33,7 @@ class KosController extends Controller
     public function indexPenghuni()
     {
         $penghunis = Penghuni::all();
-        return view('indexPenghuni', compact('penghunis'));
+        return view('indexPenghuni', ['penghunis' => $penghunis]);
     }
 
     /**
@@ -49,13 +54,19 @@ class KosController extends Controller
      */
     public function store(Request $request)
     {
+        
+
         Penghuni::create([
             'nama' => $request->input('nama'),
             'alamatAsal' => $request->input('alamatAsal'),
             'noTelp' => $request->input('noTelp'),
-            'nomorKamar' => $request->input('nomorKamar')
+            'nomorKamar' => $request->input('nomorKamar'),
+            'image' => $request->file('image')->store('image', 'public')
         ]);
         return response()->redirectTo('/penghuni');
+        $this->validate($request, [
+                    'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                ]);
     }
 
     /**

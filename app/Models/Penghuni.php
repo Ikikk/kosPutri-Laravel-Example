@@ -12,7 +12,8 @@ class Penghuni extends Model
         'nama', 
         'alamatAsal',
         'noTelp',
-        'nomorKamar'
+        'nomorKamar',
+        'images'
     ];
 
     public function room(){

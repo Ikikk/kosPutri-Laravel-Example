@@ -21,6 +21,7 @@ return new class extends Migration
             $table->bigInteger('noTelp');
             $table->unsignedBigInteger('nomorKamar');
             $table->foreign('nomorKamar')->references('id')->on('rooms');
+            $table->string('images');
         });
     }
 
