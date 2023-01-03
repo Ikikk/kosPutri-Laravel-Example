@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -34,4 +35,11 @@ return new class extends Migration
     {
         Schema::dropIfExists('penghuni');
     }
+
+    // public function tearDown()
+    // {
+    //     $maxId =DB::table('users')->max('id');
+    //     DB::statement('ALTER TABLE users AUTO_INCREMENT=' . intval($maxId + 1) . ';');
+    // }
+
 };

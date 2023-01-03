@@ -21,6 +21,7 @@ class PenghuniFactory extends Factory
             'nama' => fake()->name(),
             'alamatAsal' => fake()->address(),
             'noTelp' => fake()->numerify('############')
+            // 'nomorKamar' => fake()->randomDigitNotNull()
         ];
     }
 }

@@ -4,8 +4,7 @@
 <ul>
     <dl>
         <h2>{{$penghunis->nama}}</h2>
-        <img src="{{ url('public\image'.$penghunis->image) }}"
-        style="height: 100px; width: 150px;">
+        <img src={{ asset('storage/images'.$penghunis->image)}} style="height: 150px; width: 150px;" >  {{$penghunis->image}} <br>
         <dd>- Alamat Asal : {{$penghunis->alamatAsal}}</dd>
         <dd>- Nomor Telepon : {{$penghunis->noTelp}}</dd>
         <dd>- Nomor Kamar : {{$penghunis->nomorKamar}}</dd>
