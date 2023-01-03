@@ -88,9 +88,6 @@ class KosController extends Controller
      */
     public function showPenghuni($id)
     {
-        //$penghunis = DB::table('penghunis')->where('id', $id)->first();
-        //$rooms = DB::table('rooms')->where('id', $penghunis->rooms)->first();
-        //return view('showPenghuni', compact('penghunis', 'rooms'));
         $penghunis = Penghuni::find($id);
         return view('showPenghuni', compact('penghunis'));
     }

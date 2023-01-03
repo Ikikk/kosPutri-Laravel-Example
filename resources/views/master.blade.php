@@ -22,10 +22,28 @@
                 color: white;
             }
         </style>
+
+        <nav id="nav-main" class="navbar navbar-expand-xxl bg-light">
+
+            <div class="container">
+                <a class="navbar-brand " >Kos Putri Pak Dar</a>
+            <!-- Links -->
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="kamar">Kamar</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="penghuni">Penghuni</a>
+                </li>
+            </ul>
+            </div>
+        
+        </nav>
     </head>
     <body class="antialiased">
-        <h1>Kos Putri Pak Dar</h1><br>
+        
+        {{-- <h1>Kos Putri Pak Dar</h1><br> --}}
         @yield('content')
-        <br><br><br><h3> Jalan Keputih Perintis 1A No.42A</h3>
+        {{-- <br><br><br><h3> Jalan Keputih Perintis 1A No.42A</h3> --}}
     </body>
 </html>
