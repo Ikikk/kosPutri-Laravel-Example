@@ -29,7 +29,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             return response()->redirectTo('/')->withSucess('Signed in');
         }
-        return response()->redirectTo('/login')->withSuccess('Login details are not valid');
+        return response()->redirectTo('/')->withSuccess('Login details are not valid');
     }
 
     public function registration()
@@ -54,10 +54,10 @@ class AuthController extends Controller
     public function index()
     {
         if(Auth::check()){
-            return view('/dashboard');
+            return view('/');
         }
   
-        return redirect("/login")->withSuccess('You are not allowed to access');
+        return redirect("/")->withSuccess('You are not allowed to access');
     }
 
     public function create(array $data)

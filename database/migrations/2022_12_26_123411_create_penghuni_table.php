@@ -17,8 +17,6 @@ return new class extends Migration
         Schema::create('penghunis', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('email');
-            $table->string('password');
             $table->string('nama');
             $table->string('alamatAsal');
             $table->bigInteger('noTelp');

@@ -1,8 +1,10 @@
-@extends('masterlogin')
+@extends('master')
 
-@section('field')
+@section('content')
+    
+    @guest
     <br><br>
-    <form method="POST" action="/loginStore">
+        <form method="POST" action="/loginStore">
         @csrf
 
         <div class="signup-form container justify-content-center col-md-4 card">
@@ -28,4 +30,11 @@
                 <input type="submit" value="Submit" class="btn btn-dark btn-block">
 
         </div>
+    @else
+    <img src={{url('storage/images/1672755953.png')}} class="img-fluid " alt="Responsive image" 
+    style="
+        height:115vh;
+    ">
+    @endguest
+    
 @endsection

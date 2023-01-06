@@ -23,16 +23,16 @@
             }
         </style>
         
-        <nav class="navbar navbar-dark bg-black">
+        <nav class="navbar navbar-dark bg-black" id="navMain">
 
             <div class="container">
                 <a class="navbar-brand" href="#">Kos Putri Pak Dar</a>
 
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                {{-- <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> --}}
 
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="nav navbar-nav" id="navbarNav">
                             @guest
                             <a class="nav-link" href="login">Login</a>
                             <a class="nav-link" href="registration">Registration</a>

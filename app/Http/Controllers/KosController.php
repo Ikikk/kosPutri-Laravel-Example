@@ -67,8 +67,6 @@ class KosController extends Controller
         $penghuni = new Penghuni;
 
         $penghuni->nama = $request->nama;
-        $penghuni->email = $request->email;
-        $penghuni->password = bcrypt($request['password']);
         $penghuni->alamatAsal = $request->alamatAsal;
         $penghuni->noTelp = $request->noTelp;
         $penghuni->nomorKamar = $request->nomorKamar;
