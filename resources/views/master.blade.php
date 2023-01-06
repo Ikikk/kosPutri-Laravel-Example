@@ -18,26 +18,34 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
-                background: black;
-                color: white;
+                /* background: black;
+                color: white; */
             }
         </style>
-
-        <nav id="nav-main" class="navbar navbar-expand-xxl bg-light">
+        
+        <nav class="navbar navbar-dark bg-black">
 
             <div class="container">
-                <a class="navbar-brand " >Kos Putri Pak Dar</a>
+                <a class="navbar-brand" href="#">Kos Putri Pak Dar</a>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                            @guest
+                            <a class="nav-link" href="login">Login</a>
+                            <a class="nav-link" href="registration">Registration</a>
+                            @else
+                            <a class="nav-link" href="kamar">Kamar</a>
+                            <a class="nav-link" href="penghuni">Penghuni</a>
+                            <a class="nav-link" href="signout">Log Out</a>
+                            @endguest
+
+                </div>
             <!-- Links -->
-            <ul class="nav navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" href="kamar">Kamar</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="penghuni">Penghuni</a>
-                </li>
-            </ul>
+                
             </div>
-        
         </nav>
     </head>
     <body class="antialiased">

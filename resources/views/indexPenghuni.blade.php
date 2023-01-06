@@ -1,6 +1,7 @@
 @extends('master')
 
 @section('content')
+<br>
 <ol>
     @foreach ($penghunis as $item)
         <li>
@@ -18,6 +19,12 @@
     @endforeach
 </ol>
 
-<a href="/penghuni/create" class="btn btn-success my-3"> Create </a>
+<div class="d-flex flex-row my-5">
+    <a href="/penghuni/create" class="btn btn-success my-3 mx-3"> Create </a><br>
+
+    <a href="/" class="btn btn-warning my-3"> Back </a>
+</div>
+
+
 
 @endsection

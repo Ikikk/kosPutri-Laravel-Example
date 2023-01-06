@@ -16,6 +16,5 @@ class PenghuniSeeder extends Seeder
     public function run()
     {
         Penghuni::factory(10)->create();
-        
     }
 }

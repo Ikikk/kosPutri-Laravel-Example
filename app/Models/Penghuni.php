@@ -10,6 +10,8 @@ class Penghuni extends Model
     use HasFactory;
     protected $fillable= [ 
         'nama', 
+        'email',
+        'password',
         'alamatAsal',
         'noTelp',
         'nomorKamar',

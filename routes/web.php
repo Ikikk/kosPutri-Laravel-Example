@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KosController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\users_controller;
 
@@ -15,7 +16,11 @@ use App\Http\Controllers\users_controller;
 |
 */
 
-Route::get('/', [KosController::class, 'index']);
+Route::get('/', [AuthController::class, 'index']);
+Route::get('/login',[AuthController::class, 'dashboard']); //
+Route::post('/loginStore', [AuthController::class, 'customLogin']);
+Route::get('/registration', [AuthController::class, 'registration']);
+Route::post('/registrationStore', [AuthController::class, 'customRegistration']);
 Route::get('/kamar', [KosController::class, 'indexKamar']);
 Route::get('/penghuni', [KosController::class, 'indexPenghuni']);
 Route::get('/penghuni/create', [KosController::class, 'create']);
@@ -25,3 +30,4 @@ Route::delete('/penghuni/{id}/delete', [KosController::class, 'destroy']);
 Route::post('/penghuni/{id}/update', [KosController::class, 'update']);
 Route::get('/penghuni/{id}/edit', [KosController::class, 'edit']);
 Route::get('/kamar/{id}', [KosController::class, 'showKamar']);
+Route::get('/signout', [AuthController::class, 'signOut']);

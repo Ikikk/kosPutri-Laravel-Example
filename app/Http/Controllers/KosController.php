@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Penghuni;
 use App\Models\Room;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
@@ -15,10 +17,6 @@ class KosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('index');
-    }
 
     public function indexKamar()
     {
@@ -69,6 +67,8 @@ class KosController extends Controller
         $penghuni = new Penghuni;
 
         $penghuni->nama = $request->nama;
+        $penghuni->email = $request->email;
+        $penghuni->password = bcrypt($request['password']);
         $penghuni->alamatAsal = $request->alamatAsal;
         $penghuni->noTelp = $request->noTelp;
         $penghuni->nomorKamar = $request->nomorKamar;

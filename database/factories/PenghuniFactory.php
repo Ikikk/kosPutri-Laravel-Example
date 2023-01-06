@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 
 
 /**
@@ -19,6 +20,8 @@ class PenghuniFactory extends Factory
     {
         return [ 
             'nama' => fake()->name(),
+            'email' => fake()->unique()->safeEmail(),
+            'password' => Hash::make('password'),
             'alamatAsal' => fake()->address(),
             'noTelp' => fake()->numerify('############')
             // 'nomorKamar' => fake()->randomDigitNotNull()
